@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>OJS Trading Institute | Mastery Begins</title>
+
+<meta name="description" content="Learn Indian Share Market and Global Forex Trading with OJS Trading Institute. Explore educational programs, mentorship and price-action based learning.">
+
+<style>
+:root {
+  --navy: #07152f;
+  --navy2: #10254a;
+  --gold: #d9b66b;
+  --cream: #f8f5ed;
+  --white: #ffffff;
+  --text: #24324a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, serif;
+  line-height: 1.25;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: min(1120px, 90%);
+  margin: auto;
+}
+
+header {
+  background: var(--navy);
+  border-bottom: 1px solid #b99a58;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.brand span {
+  display: block;
+  color: white;
+  font: 10px Arial, sans-serif;
+  letter-spacing: 2px;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white;
+  font-size: 13px;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 21px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 13px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.btn-outline {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.hero {
+  background:
+    radial-gradient(ellipse at 80% 40%, #233b61 0%, transparent 45%),
+    var(--navy);
+  color: white;
+  padding: 105px 0 95px;
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-size: 12px;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 6vw, 68px);
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+
+.hero h2 {
+  font-size: clamp(20px, 3vw, 30px);
+  font-weight: normal;
+  margin: 15px 0;
+}
+
+.hero p {
+  color: #d7deeb;
+  margin: 15px auto 28px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  color: var(--navy);
+  font-size: clamp(29px, 4vw, 40px);
+}
+
+.section-title p {
+  margin-top: 12px;
+  color: #68748a;
+}
+
+.gold-line {
+  width: 65px;
+  height: 3px;
+  background: var(--gold);
+  margin: 15px auto;
+}
+
+.about {
+  text-align: center;
+  max-width: 820px;
+  margin: auto;
+}
+
+.about p {
+  font-size: 16px;
+}
+
+.dark {
+  background: var(--navy);
+  color: white;
+}
+
+.dark .section-title h2 {
+  color: white;
+}
+
+.dark .section-title p {
+  color: #c5cede;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.card {
+  background: white;
+  padding: 28px;
+  border-radius: 8px;
+  border: 1px solid #e9e2d3;
+  transition: 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px #07152f14;
+  border-color: var(--gold);
+}
+
+.card h3 {
+  color: var(--navy);
+  font-size: 21px;
+  margin: 12px 0;
+}
+
+.card p {
+  color: #657187;
+  font-size: 14px;
+}
+
+.icon {
+  font-size: 30px;
+}
+
+.programs {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.program-card {
+  background: var(--navy2);
+  color: white;
+  border: 1px solid #344665;
+}
+
+.program-card h3 {
+  color: var(--gold);
+  font-size: 25px;
+}
+
+.program-card p {
+  color: #d6deea;
+  margin: 12px 0 20px;
+}
+
+.program-card .btn {
+  margin-top: 15px;
+}
+
+.strategy-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.strategy {
+  text-align: center;
+  background: #10254a;
+  border: 1px solid #314362;
+  border-radius: 8px;
+  padding: 24px 10px;
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 17px;
+}
+
+.team-card {
+  text-align: center;
+}
+
+.initials {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--gold);
+  display: grid;
+  place-items: center;
+  margin: 0 auto 18px;
+  border: 2px solid var(--gold);
+  font: bold 25px Georgia, serif;
+}
+
+.team-card .role {
+  color: #99772f;
+  font-weight: bold;
+  font-size: 13px;
+  margin: 8px 0;
+}
+
+.benefit {
+  text-align: center;
+}
+
+.benefit .icon {
+  color: #b18a39;
+}
+
+.fees-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  min-width: 560px;
+}
+
+th, td {
+  padding: 18px;
+  border: 1px solid #e4dfd3;
+  text-align: left;
+}
+
+th {
+  background: var(--navy);
+  color: var(--gold);
+}
+
+.mega {
+  background: #f3e6c5;
+  font-weight: bold;
+}
+
+.note {
+  font-size: 13px;
+  color: #68748a;
+  margin-top: 15px;
+}
+
+.callback {
+  background: #10254a;
+  color: white;
+  border: 1px solid #334969;
+  padding: 35px;
+  border-radius: 10px;
+  max-width: 760px;
+  margin: auto;
+  text-align: center;
+}
+
+.callback h3 {
+  color: var(--gold);
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+.callback p {
+  margin-bottom: 20px;
+  color: #d6deea;
+}
+
+.form-placeholder {
+  padding: 22px;
+  border: 1px dashed var(--gold);
+  border-radius: 5px;
+  margin-top: 20px;
+  color: #f4e6c4;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+
+.contact-box {
+  padding: 22px;
+  border: 1px solid #344665;
+  border-radius: 7px;
+}
+
+.contact-box h3 {
+  color: var(--gold);
+  margin-bottom: 10px;
+}
+
+.contact-box p, .contact-box a {
+  color: white;
+  overflow-wrap: anywhere;
+}
+
+footer {
+  background: #040d1e;
+  color: #d4dbea;
+  text-align: center;
+  padding: 35px 15px;
+}
+
+footer strong {
+  color: var(--gold);
+}
+
+footer p {
+  font-size: 12px;
+  margin-top: 12px;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    flex-direction: column;
+    padding: 18px 0;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 13px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .strategy-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    padding: 75px 0;
+  }
+}
+
+@media (max-width: 520px) {
+  section {
+    padding: 58px 0;
+  }
+
+  .grid,
+  .programs,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 23px;
+  }
+
+  .callback {
+    padding: 23px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container navbar">
+    <a href="#home" class="brand">
+      OJS TRADING INSTITUTE
+      <span>WHERE INTUITION ENDS, MASTERY BEGINS</span>
+    </a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#programs">Programs</a>
+      <a href="#team">Team</a>
+      <a href="#fees">Fees</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="badge">100% Online | Live Interactive Classes</div>
+
+    <h1>OJS TRADING INSTITUTE</h1>
+
+    <h2>Where Intuition Ends, Mastery Begins</h2>
+
+    <p>Indian Share Market &bull; Global Forex &amp; Commodities</p>
+
+    <div class="hero-buttons">
+      <a class="btn btn-gold" href="#callback">Get a Call Back</a>
+      <a class="btn btn-outline" href="#contact">WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="section-title">
+      <h2>About OJS</h2>
+      <div class="gold-line"></div>
+      <p>Learning with discipline. Growing with knowledge.</p>
+    </div>
+
+    <div class="about">
+      <p>
+        OJS Trading Institute ka mission hai students ko market ki
+        working, technical analysis, price action aur risk management
+        structured way mein samjhana. आम भाषा में, हमारा उद्देश्य
+        students ko informed decisions aur disciplined learning ki
+        taraf guide karna hai. आमच्या शिक्षण पद्धतीत समज, शिस्त आणि
+        सातत्य यांना महत्त्व दिले जाते.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="programs">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our Programs</h2>
+      <div class="gold-line"></div>
+      <p>Build your understanding from Basic to Advanced.</p>
+    </div>
+
+    <div class="grid programs">
+      <article class="card program-card">
+        <div class="icon">📈</div>
+        <h3>Indian Market</h3>
+        <p>
+          Basic to Advanced learning in Indian share market,
+          technical analysis and price-action concepts.
+        </p>
+        <a class="btn btn-gold" href="#callback">Enquire Now</a>
+      </article>
+
+      <article class="card program-card">
+        <div class="icon">🌐</div>
+        <h3>Forex Trading</h3>
+        <p>
+          Basic to Advanced learning in currency markets,
+          chart analysis and risk-management concepts.
+        </p>
+        <a class="btn btn-gold" href="#callback">Enquire Now</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="strategies">
+  <div class="container">
+    <div class="section-title">
+      <h2>Signature Strategies</h2>
+      <div class="gold-line"></div>
+      <p>Explore the names behind our signature learning framework.</p>
+    </div>
+
+    <div class="grid strategy-grid">
+      <div class="strategy">✦ Trap Trading</div>
+      <div class="strategy">✦ Breakfast Strategy</div>
+      <div class="strategy">✦ Liquidity Setup</div>
+      <div class="strategy">✦ Fibonacci</div>
+      <div class="strategy">✦ Bottom Fishing</div>
+      <div class="strategy">✦ Top Catching</div>
+      <div class="strategy">✦ Brahmastra</div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="team">
+  <div class="container">
+    <div class="section-title">
+      <h2>Meet the Team</h2>
+      <div class="gold-line"></div>
+      <p>Meet the mentors behind OJS Trading Institute.</p>
+    </div>
+
+    <div class="grid">
+      <article class="card team-card">
+        <div class="initials">KP</div>
+        <h3>Krishna Patil</h3>
+        <p class="role">Founder &amp; Lead Mentor</p>
+        <p>6+ years Indian Market experience<br>3+ years Forex experience</p>
+      </article>
+
+      <article class="card team-card">
+        <div class="initials">LP</div>
+        <h3>Lokesh Pande</h3>
+        <p class="role">Mentor, F&amp;O Specialist</p>
+        <p>5+ years experience</p>
+      </article>
+
+      <article class="card team-card">
+        <div class="initials">RK</div>
+        <h3>Raj Khonde</h3>
+        <p class="role">Mentor, Intraday Equity Specialist</p>
+        <p>5+ years experience</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="benefits">
+  <div class="container">
+    <div class="section-title">
+      <h2>Why Choose OJS?</h2>
+      <div class="gold-line"></div>
+      <p>A structured learning experience built around education and discipline.</p>
+    </div>
+
+    <div class="grid">
+      <article class="card benefit">
+        <div class="icon">🏅</div>
+        <h3>Certificate</h3>
+        <p>Certificate details are shared with the relevant batch.</p>
+      </article>
+
+      <article class="card benefit">
+        <div class="icon">🎓</div>
+        <h3>1-Year Mentorship</h3>
+        <p>Mentorship support as specified in the selected program.</p>
+      </article>
+
+      <article class="card benefit">
+        <div class="icon">📓</div>
+        <h3>Trading Journal</h3>
+        <p>Learn to record and review your trading decisions.</p>
+      </article>
+
+      <article class="card benefit">
+        <div class="icon">🤝</div>
+        <h3>Community Access</h3>
+        <p>Learning community access according to batch terms.</p>
+      </article>
+
+      <article class="card benefit">
+        <div class="icon">🗓️</div>
+        <h3>Sunday Q&amp;A</h3>
+        <p>Ask questions and strengthen your understanding.</p>
+      </article>
+
+      <article class="card benefit">
+        <div class="icon">📊</div>
+        <h3>Investing &amp; Intraday Setups</h3>
+        <p>Educational concepts for investing and intraday analysis.</p>
+      </article>
+
+      <article class="card benefit">
+        <div class="icon">🕯️</div>
+        <h3>Pure Price Action</h3>
+        <p>Study price-action based market setups.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="fees">
+  <div class="container">
+    <div class="section-title">
+      <h2>Fee Structure</h2>
+      <div class="gold-line"></div>
+      <p>Contact our team for batch details and current offers.</p>
+    </div>
+
+    <div class="fees-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Program / Batch</th>
+            <th>Regular Fee</th>
+            <th>First-10 Offer</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Indian Market Batch</td>
+            <td>To be announced</td>
+            <td>Confirm with team</td>
+          </tr>
+
+          <tr>
+            <td>Forex Batch</td>
+            <td>To be announced</td>
+            <td>Confirm with team</td>
+          </tr>
+
+          <tr class="mega">
+            <td>Mega Combo</td>
+            <td>To be announced</td>
+            <td>Confirm with team</td>
+          </tr>
+
+          <tr>
+            <td>OJS Masterclass</td>
+            <td>₹6,499</td>
+            <td>Confirm with team</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="note">
+      Final fees, batch inclusions and discount eligibility should be
+      confirmed by the institute before payment.
+    </p>
+
+    <div style="text-align:center; margin-top:28px;">
+      <a href="#callback" class="btn btn-gold">Ask About Fees</a>
+    </div>
+  </div>
+</section>
+
+<section id="callback">
+  <div class="container">
+    <div class="section-title">
+      <h2>Get a Call Back</h2>
+      <div class="gold-line"></div>
+      <p>Tell us about your learning interests.</p>
+    </div>
+
+    <div class="callback">
+      <h3>Start Your Learning Journey</h3>
+
+      <p>
+        Full syllabus aur aapke sawaalon ke liye hamari team
+        aapse call par sampark karegi.
+      </p>
+
+      <div class="form-placeholder">
+        <strong>Student Enquiry Form</strong>
+        <p>
+          Google Form abhi add nahi hua hai.
+          Institute ka form link milne par yahan connect kiya jayega.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="dark" id="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2>Contact OJS</h2>
+      <div class="gold-line"></div>
+      <p>For course details and enrolment enquiries.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-box">
+        <h3>Email</h3>
+        <p>
+          <a href="mailto:ojstradinginstitute@gmail.com">
+            ojstradinginstitute@gmail.com
+          </a>
+        </p>
+      </div>
+
+      <div class="contact-box">
+        <h3>WhatsApp</h3>
+        <p>Official WhatsApp link to be added.</p>
+      </div>
+
+      <div class="contact-box">
+        <h3>Call Us</h3>
+        <p>Institute contact number to be added.</p>
+      </div>
+    </div>
+
+    <p style="text-align:center; margin-top:25px; color:#d6deea;">
+      WhatsApp QR code can be added here after it is provided.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <strong>OJS TRADING INSTITUTE</strong>
+
+  <p>Where Intuition Ends, Mastery Begins</p>
+
+  <p>
+    Educational content only. Trading and investing involve risk.
+    No profit or return is guaranteed. This website does not
+    constitute personalised investment advice.
+  </p>
+
+  <p>&copy; 2026 OJS Trading Institute. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
